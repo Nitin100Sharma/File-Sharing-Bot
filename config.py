@@ -31,6 +31,11 @@ PORT = os.environ.get("PORT", "8080")
 DB_URI = os.environ.get("DATABASE_URL", "")
 DB_NAME = os.environ.get("DATABASE_NAME", "filesharexbot")
 
+# Auto-delete
+"""add time im seconds for waitingwaiting before delete 
+1min=60, 2min=60×2=120, 5min=60×5=300"""
+SECONDS = int(os.getenv("SECONDS", "60"))
+
 #force sub channel id, if you want enable force sub
 FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
 
