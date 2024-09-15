@@ -34,6 +34,10 @@ DB_NAME = os.environ.get("DATABASE_NAME", "filesharexbot")
 #force sub channel id, if you want enable force sub
 FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
 
+# Shortener APi and url
+SHORTLINK_URL = os.environ.get('SHORTLINK_URL', "gplinks.com")
+SHORTLINK_API = os.environ.get('SHORTLINK_API', "5cfebe36ddc1800f0ac5ba1c35bfdecc524a4ceb")
+
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
