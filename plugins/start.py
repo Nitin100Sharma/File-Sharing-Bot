@@ -16,8 +16,6 @@ from helper_func import subscribed, encode, decode, get_messages
 from database.database import add_user, del_user, full_userbase, present_user
 
 
-
-
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
 async def start_command(client: Client, message: Message):
     id = message.from_user.id
@@ -86,7 +84,11 @@ async def start_command(client: Client, message: Message):
                 Nilesh.append(sent_msg)
             except:
                 pass
-        k = await message.reply_text("<b>❗️ <u>Hey!</u> ❗️</b>\n\n<b>This video / file will be deleted in 1 minutes by default (Due to copyright issues).\n\n📌 Please forward this video / file to somewhere else and start downloading there.</b>")
+        if SECONDS:
+            delete-time = SECONDS/60
+        else:
+            delete-time = -1
+        k = await message.reply_text("<b>❗️ <u>Hey!</u> ❗️</b>\n\n<b>This video / file will be deleted in {delete-time} minutes(Due to copyright issues).\n\n📌 Please forward this video / file to somewhere else and start downloading there.</b>")
         await asyncio.sleep(SECONDS)
 
         for data in Nilesh:
