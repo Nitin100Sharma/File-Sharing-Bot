@@ -67,9 +67,7 @@ async def batch(client: Client, message: Message):
         InlineKeyboardButton("🔁 Original URL", url=f'https://telegram.me/share/url?url={link}'),
         InlineKeyboardButton("🔁 Short URL", url=f'https://telegram.me/share/url?url={short_link}')
     ]])
-    await second_message.reply_text(f"<b>Here is your link</b>\n\n
-    <b>⚡️Original URL:</b>\n{link}\n\n\n
-    <b>⚡️Short URL:</b>\n{short_link}", quote=True, reply_markup=reply_markup)
+    await second_message.reply_text(f"<b>Here is your link</b>\n\n<b>⚡️Original URL:</b>\n{link}\n\n\n<b>⚡️Short URL:</b>\n{short_link}", quote=True, reply_markup=reply_markup)
 # =======================================================================================================
 
 
@@ -95,7 +93,5 @@ async def link_generator(client: Client, message: Message):
         InlineKeyboardButton("🔁 Original URL", url=f'https://telegram.me/share/url?url={link}'),
         InlineKeyboardButton("🔁 Short URL", url=f'https://telegram.me/share/url?url={short_link}')
     ]])
-    await second_message.reply_text(f"<b>Here is your link</b>\n\n
-    <b>⚡️Original URL:</b>\n{link}\n\n\n
-    <b>⚡️Short URL:</b>\n{short_link}", quote=True, reply_markup=reply_markup)
+    await second_message.reply_text(f"<b>Here is your link</b>\n\n<b>⚡️Original URL:</b>\n{link}\n\n\n<b>⚡️Short URL:</b>\n{short_link}", quote=True, reply_markup=reply_markup)
 # =======================================================================================================
