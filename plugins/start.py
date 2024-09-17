@@ -134,7 +134,6 @@ async def not_joined(client: Client, message: Message):
             InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ •", url=client.invitelink2),
         ]
     ]
-        )
     except IndexError:
         pass
 
